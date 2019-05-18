@@ -1,4 +1,4 @@
-# better-ysort
+# BetterYSort
 
 Can be used in place of Godot's built-in `YSort` in order to support customizing the y-value used to sort on nodes. 
 
