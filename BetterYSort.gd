@@ -28,7 +28,7 @@ func _process(delta : float):
 	_sort()
 
 func _sort():
-	var new_children : Array = []
+	var children : Array = []
 	
 	for child in get_children():
 		var data : Array = []
@@ -38,13 +38,15 @@ func _sort():
 		else:
 			data = [child.global_position.y, child]
 		
-		new_children.append(data)
+		children.append(data)
 	
-	new_children.sort_custom(self, "compare_nodes")
+	children.sort_custom(self, "compare_nodes")
 		
-	for index in range(0, new_children.size()):
-		var child = new_children[index][1]
-		move_child(child, index)
+	for index in range(0, children.size()):
+		var child = children[index][1]
+		
+		if child.get_index() != index:
+			move_child(child, index)
 
 func compare_nodes(node_a : Array, node_b : Array) -> int:
 	if node_a[0] < node_b[0]:
