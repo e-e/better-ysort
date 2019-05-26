@@ -34,17 +34,15 @@ func flatten():
 func _process(delta : float):
 	_sort()
 
-# this can be overridden to define how you want certain nodes to be sorted
-# each item in `children` needs to be an array with to elements: the y-position to sort on
-# and the node which should be moved in the tree
+# any node that implements the `get_ysort_yposition` takes control 
+# of which position will be used during the sort
 func get_sort_array() -> Array:
 	var children : Array = []
 	
 	for child in get_children():
 		var data : Array = []
-		if child is Path2D:
-			var sort_node : PathFollow2D = child.get_children()[0]
-			data = [sort_node.global_position.y, child]
+		if child.has_method('get_ysort_yposition'):
+			data = [node.get_ysort_yposition(), child]
 		else:
 			data = [child.global_position.y, child]
 		
