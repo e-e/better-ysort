@@ -1,6 +1,8 @@
 extends Node2D
 class_name BetterYSort
 
+const GROUP_ROOT_YSORT = "root_ysort"
+
 func _ready():
 	# we don't want child BetterYSort's to try to sort anything, 
 	# since their children just re-parented
@@ -9,6 +11,7 @@ func _ready():
 	# this is the top-level BetterYSort
 	if not get_parent().has_method("is_better_sort"):
 		set_process(true)
+		add_to_group(GROUP_ROOT_YSORT)
 		flatten()
 
 # stupid method because you can't reference a class_name inside the class itself

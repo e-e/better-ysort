@@ -44,5 +44,5 @@ rotate = false
 script = ExtResource( 4 )
 
 [node name="Entity5" parent="BetterYSort/Path2D/PathFollow2D" instance=ExtResource( 2 )]
-position = Vector2( 7.62939e-006, 3.05176e-005 )
-rotation = 9.31322e-010
+position = Vector2( 7.62939e-06, 3.05176e-05 )
+rotation = 9.31322e-10
