@@ -6,4 +6,7 @@ An example use-case is for a `Path2D` node which is the direct child of a `YSort
 
 Supports nesting multiple `BetterYSort` nodes for organization. All child `BetterYSort` nodes are flattened into the top-level `BetterYSort` when the `_ready()` method is called on the base node.
 
+### Use
+For any node which is a direct descendant of a `BetterYSort` node for which you would like to use a different y-value when sorting, simply implement a method `get_ysort_yposition()`which returns the y-value for sorting. 
+
 Credit to u/Shianiawhite for the initial implementation (https://www.reddit.com/r/godot/comments/apul4s/is_zindex_the_only_drawing_order_option_for/)
