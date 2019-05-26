@@ -42,7 +42,7 @@ func get_sort_array() -> Array:
 	for child in get_children():
 		var data : Array = []
 		if child.has_method('get_ysort_yposition'):
-			data = [node.get_ysort_yposition(), child]
+			data = [child.get_ysort_yposition(), child]
 		else:
 			data = [child.global_position.y, child]
 		
