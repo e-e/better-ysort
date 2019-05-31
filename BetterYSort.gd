@@ -32,6 +32,8 @@ func flatten():
 			child.queue_free()
 	
 	if get_parent().has_method("is_better_sort"):
+		
+		self.additional_flatten_actions()
 		return get_children()
 
 func _process(delta : float):
@@ -74,3 +76,8 @@ func compare_nodes(node_a : Array, node_b : Array) -> bool:
 		return true
 		
 	return false
+
+# this can be overridden by any child class
+# so that custom actions can be taken
+func additional_flatten_actions():
+	pass
