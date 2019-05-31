@@ -20,7 +20,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="path2d_ysort"
+config/name="BetterYSort"
 run/main_scene="res://example/Main.tscn"
 config/icon="res://icon.png"
 
