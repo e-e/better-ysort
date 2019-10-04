@@ -9,4 +9,6 @@ Supports nesting multiple `BetterYSort` nodes for organization. All child `Bette
 ### Use
 For any node which is a direct descendant of a `BetterYSort` node for which you would like to use a different y-value when sorting, simply implement a method `get_ysort_yposition()`which returns the y-value for sorting. 
 
-Credit to u/Shianiawhite for the initial implementation (https://www.reddit.com/r/godot/comments/apul4s/is_zindex_the_only_drawing_order_option_for/)
+---
+
+*Credit to u/Shianiawhite for the initial implementation (https://www.reddit.com/r/godot/comments/apul4s/is_zindex_the_only_drawing_order_option_for/)*
